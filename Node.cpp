@@ -43,4 +43,11 @@ int Node::getY() {
 int Node::getNumber() {
 	return Node::number;
 }
+
+istream &operator>>(istream &input, Node &node) {
+	int number, x, y;
+	input >> number >> x >> y;
+	node.setNode(number, x, y);
+	return input;
+}
 #endif

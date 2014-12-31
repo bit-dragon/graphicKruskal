@@ -13,14 +13,18 @@ Edge::Edge(int u, int v, int c) {
 	 setEdge(u, v, c);
 }
 
-// Private methods
-// void Edge::render
+Edge::~Edge() {}
 
 // Public methods
 void Edge::setEdge(int u, int v, int c) {
 	Edge::u = u;
 	Edge::v = v;
 	Edge::c = c;
+	Edge::state = WHITE;
+}
+
+void Edge::setState(int state) {
+	Edge::state = state;
 }
 
 void Edge::render(Node node[]) {

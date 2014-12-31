@@ -6,8 +6,8 @@
 #include<graphics.h>
 #include<iostream>
 
-#define LEFT_POS 50
-#define RIGHT_POS 33
+#define LEFT_POS 30
+#define RIGHT_POS 13
 
 using namespace std;
 
@@ -46,7 +46,12 @@ void Kruskalscreen::drawLabel(int color, int top, int bottom) {
 }
 
 void Kruskalscreen::drawInstructions() {
-	// Not implemented yet
+	int offset = 170;
+	outtextxy(246, 485, (char *)"Algoritmo de Kruskal (Arbol de expansion minima, MST)");
+	outtextxy(offset, 505, (char *)"1.-		Ordenar las aristas segun su peso.");
+	outtextxy(offset, 525, (char *)"2.-		Tomar las aristas en orden una a una");
+	outtextxy(offset, 545, (char *)"2.1.-	Si los nodos de las aristas estan en diferentes conjuntos");
+	outtextxy(offset, 565, (char *)"		pertenecen al MST la pinta de verde, en caso contrario de rojo.");
 }
 
 // Public methods
@@ -55,6 +60,7 @@ void Kruskalscreen::drawAll() {
 	
 	drawLegends();
 	drawLabels();
+	drawInstructions();
 	
 	startButton.render();
 }

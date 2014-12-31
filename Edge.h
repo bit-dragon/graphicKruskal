@@ -2,7 +2,6 @@
 #define EDGE_H
 
 #include<iostream>
-#include "Edge.h"
 #include "Node.h"
 
 // Constants
@@ -16,6 +15,7 @@ class Edge {
 	private:
 		int u, v, c;
 		int e;
+		int state;
 		Node nodes[MAX];
 	public:
 		Edge();
@@ -25,6 +25,7 @@ class Edge {
 		int getV();
 		int getC();
 		void setEdge(int u, int v, int c);
+		void setState(int state);
 		void render(Node nodes[]);
 };
 #endif
